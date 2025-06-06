@@ -51,7 +51,7 @@ logo = Image.open("logo.png")
 
 st.set_page_config(page_title="Build-Main AI Tools", layout="centered")
 st.sidebar.title("🧠 Build-Main AI Tools")
-st.sidebar.image(logo,width=400)
+st.sidebar.image(logo,width=200)
 st.markdown("<h1 style='text-align: center; color: #5A5A5A;'>🤖 Build-Main AI Tools</h1>", unsafe_allow_html=True)
 choix = st.sidebar.radio("Choisissez une fonction :", ["Résumé", "Chatbot", "Analyse de mots", "Importer un fichier texte"])
 
