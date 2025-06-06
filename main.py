@@ -1,6 +1,7 @@
 import streamlit as st
 import nltk
 import heapq
+import os
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from collections import Counter
@@ -8,6 +9,27 @@ import matplotlib.pyplot as plt
 from  PIL import Image
 from datetime import datetime
 import csv
+import nltk
+import os
+
+
+def safe_nltk_download(resource):
+    try:
+        nltk.data.find(resource)
+    except LookupError:
+        nltk.download(resource.split("/")[-1])
+
+safe_nltk_download("tokenizers/punkt")
+safe_nltk_download("corpora/stopwords")
+
+def safe_nltk_download(resource):
+    try:
+        nltk.data.find(resource)
+    except LookupError:
+        nltk.download(resource.split("/")[-1])
+
+safe_nltk_download("tokenizers/punkt")
+safe_nltk_download("corpora/stopwords")
 
 
 nltk.download("punkt")
