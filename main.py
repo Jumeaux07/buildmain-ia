@@ -16,7 +16,8 @@ def safe_nltk_download(resource):
         nltk.data.find(resource)
     except LookupError:
         nltk.download(resource.split("/")[-1])
-
+nltk.download('punkt')
+nltk.download("stopwords")
 safe_nltk_download("tokenizers/punkt")
 safe_nltk_download("corpora/stopwords")
 
